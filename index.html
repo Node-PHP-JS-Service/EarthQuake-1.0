@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/EarthQuake-1.0JA/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>地震を表示するサイト</title>
+    <script type="module" crossorigin src="/EarthQuake-1.0JA/assets/index-Bfr_AeVL.js"></script>
+    <link rel="stylesheet" crossorigin href="/EarthQuake-1.0JA/assets/index-Dw0p1rZ-.css">
+  </head>
+  <body>
+    <h1>地震を表示するサイト</h1>
+    <h2>注意！</h2>
+    <p>USGSを元にしています。</p>
+    <p>USGSはアメリカがメインなので、多くの地震はアメリカで起こっているように見えます。</p>
+    <h2>マップ</h2>
+    <div id="map">
+    </div>
+    <h2>チャート</h2>
+    <canvas id="chart"></canvas>
+    <h2>色のルール</h2>
+    <p style="background-color: green; color: white;">緑はマグニチュード3未満</p>
+    <p style="background-color: yellow;">黄色はマグニチュード5未満</p>
+    <p style="background-color: red; color: white;">赤はマグニチュード7未満</p>
+    <p style="background-color: purple; color: white;">紫はマグニチュード8未満</p>
+    <p style="background-color: black; color: white;">黒はマグニチュード8以上</p>
+    <h2>表</h2>
+    <button id="openorclose">開く</button>
+    <table hidden>
+      <thead>
+        <tr>
+          <th>場所</th>
+          <th>マグニチュード</th>
+          <th>深さ</th>
+          <th>時間</th>
+          <th>MMI推定震度</th>
+          <th>マグニチュード・深さ推定震度</th>
+        </tr>
+      </thead>
+      <tbody id="table">
+
+      </tbody>
+    </table>
+    <h2>統計</h2>
+    <p id="allearthquake">見つかった地震の数：不明</p>
+    <p id="maxmagnitude">最大マグニチュード：不明</p>
+    <p id="minmagnitude">最小マグニチュード：不明</p>
+    <h2>設定</h2>
+    <div id="setting">
+      <label>マグニチュード<input id="magnitude" type="number" min="0" max="10">以上</label>
+      <label><input id="startdate" type="date">から<input id="enddate" type="date">までの地震</label>
+    </div>
+    <p id="error"></p>
+    <button id="reload">リロード</button>
+  </body>
+</html>
