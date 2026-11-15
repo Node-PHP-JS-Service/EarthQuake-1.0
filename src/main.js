@@ -111,7 +111,7 @@ function load(url) {
   fetch(url)
     .then(res => res.json())
     .then(data => {
-
+      table.replaceChildren()
       data.features.forEach(eq => {
         const coords = eq.geometry.coordinates;
         const mag = eq.properties.mag;
